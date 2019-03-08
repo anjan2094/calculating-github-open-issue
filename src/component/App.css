@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  margin-top: 2em;
+}
+#paper{
+  margin: 2em 0 0 12em;
+}
+#table{
+  background: lightblue
+}
+.spinner{
+  margin-top: 1em;
+  color: goldenrod
+}
+.loader{
+  margin-top: 1em;
+}
