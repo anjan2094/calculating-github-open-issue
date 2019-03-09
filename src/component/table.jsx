@@ -13,36 +13,35 @@ import Paper from '@material-ui/core/Paper';
 const styles = theme => ({
     root: {
       width: '70%',
-    //   marginTop: theme.spacing.unit * 3,
+      marginTop: theme.spacing.unit * 3,
       overflowX: 'auto',
     },
     table: {
-    //   minWidth: 700,
+      minWidth: 700,
     },
   });
 
 class DisplayTable extends React.Component{
     
     render(){
-        console.log('issues count---',this.props.issues);
         const { classes } = this.props;
         return(
         <Paper className={classes.root} id="paper">
           <Table id="table" className={classes.table}>
             <TableHead>
               <TableRow>
-                <TableCell>Total Issues</TableCell>
-                <TableCell>Last 24 hours Issues</TableCell>
-                <TableCell>Last 7 Days Issues</TableCell>
-                <TableCell>7 Days ago's Issues</TableCell>
+                <TableCell id="th1">Total Issues</TableCell>
+                <TableCell id="th2">Last 24 hours Issues</TableCell>
+                <TableCell id="th3">Last 7 Days Issues</TableCell>
+                <TableCell id="th4">7 Days ago Issues</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
                 <TableRow>
-                  <TableCell>{this.props.issues}</TableCell>
-                  <TableCell>{this.props.last24}</TableCell>
-                  <TableCell>{this.props.last7Days}</TableCell>
-                  <TableCell>{this.props.moreThan7Days}</TableCell>
+                  <TableCell id="td1">{this.props.issues}</TableCell>
+                  <TableCell id="td2">{this.props.last24}</TableCell>
+                  <TableCell id="td3">{this.props.last7Days}</TableCell>
+                  <TableCell id="td4">{this.props.moreThan7Days}</TableCell>
                 </TableRow>
             </TableBody>
           </Table>  

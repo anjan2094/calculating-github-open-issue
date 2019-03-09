@@ -15,3 +15,17 @@
 .loader{
   margin-top: 1em;
 }
+#th1, #th2, #th3, #th4{
+  text-align: center;
+  color: black
+}
+#td1, #td2, #td3, #td4{
+  text-align: center
+}
+.submit-btn{
+  color: rgb(170, 23, 121);
+  background: rgb(14, 177, 155);
+  border-radius: 10%;
+  overflow: hidden;
+  outline: none;
+}
