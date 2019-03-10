@@ -4,12 +4,6 @@ Project title.
 
 I build a UI that have two fields one is a input box which is used to enter the github repository and another is a submit button and there is a one more field table and that will show the open issue for different time.For calculating open issues I used github api.
 
-### How it works
-
-In the input field you have to enter the github user name/repository name and then click the submit button.
-
-Example: facebook/react
-
 ### Usage
 React js, material ui and few others library.
 
@@ -18,7 +12,6 @@ I deployed this project on surge with url http://open.issue.surge.sh/
 
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 

@@ -21,8 +21,14 @@ class App extends Component {
   handleSubmit=event=> {
     event.preventDefault();
     if(this.state.url===''){
+      this.setState({
+        isSubmit:false,
+        total_issues:0,
+        last24_issue:0,
+        last7Days_issue:0,
+        moreThan7Days_issues:0
+      })
       alert("Please enter the valid github repository!!");
-      this.setState({isSubmit:false})
     }
     else{
     this.setState({isSubmit:true})
@@ -30,8 +36,9 @@ class App extends Component {
       this.setState({isSubmit:false})
       },5000
       )
-    this.apiCall(this.state.url);
-    this.totalIssues(this.state.url);
+    let url=this.state.url.substring(19)
+    this.apiCall(url);
+    this.totalIssues(url);
     }
   }
 
@@ -66,7 +73,7 @@ class App extends Component {
   issues24=data=>{
     let yesterday = new Date(new Date().getTime() - (24 * 60 * 60 * 1000));
     let count=0;
-    for(let i=0; i<=data.length; i++)
+    for(let i=0; i<data.length; i++)
     {
       let date=new Date(data[i].created_at)
       if(yesterday.getTime()<=date.getTime()){
@@ -86,7 +93,7 @@ class App extends Component {
     let yesterday = new Date(new Date().getTime() - (24 * 60 * 60 * 1000));
     let last7Days = new Date(new Date().getTime() - (7*24 * 60 * 60 * 1000));
     let count=0;
-    for(let i=0; i<=data.length; i++)
+    for(let i=0; i<data.length; i++)
     {
       let date=new Date(data[i].created_at)
       if(date.getTime()>yesterday.getTime())
