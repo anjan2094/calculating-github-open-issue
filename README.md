@@ -2,7 +2,7 @@ Project title.
 
 ## Calculating open issue
 
-I build a UI that have two fields one is a input box which is used to enter the github repository and another is a submit button and there is a one more field table and that will show the open issue for different time.For calculating open issues I used github api.
+I build a UI that have two fields one is an input box which is used to enter the github repository link and another is a submit button and there table which is showing the open issue for different time.For calculating open issues I used github api's.
 
 ### Usage
 React js, material ui and few others library.
